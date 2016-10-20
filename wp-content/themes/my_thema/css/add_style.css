@@ -908,7 +908,7 @@ a.index-menu:hover{
 div.message-area{
   background-color: rgb(233, 233, 233);
   margin-top: 2em;
-
+  padding-bottom: 3em;
 }
 .message {
   width: 90%;

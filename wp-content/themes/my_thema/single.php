@@ -1,204 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-  <title>RECRUIT - Subpage Template</title>
-
-  <!-- Bootstrap Core CSS -->
-  <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/bootstrap.min.css" rel="stylesheet">
-
-
-  <!-- Custom CSS -->
-  <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/style.css" rel="stylesheet">
-  <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/add_style.css" rel="stylesheet">
-  <!-- Custom Fonts -->
-  <script src="https://use.fontawesome.com/a3de6310f4.js"></script>
-
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-  <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-  <![endif]-->
-  <!-- スクロール位置を取得しサイドナビを点灯 -->
-  <script type="text/javascript">
-  $(function(){
-    $('a[href^="#"]').click(function(){
-      var speed = 500;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top;
-      $("html, body").animate({scrollTop:position}, speed, "swing");
-      return false;
-    });
-  });
-  </script>
-  <script type="text/javascript">
-  $(function() {
-    /**
-    * ページ内スクロール
-    */
-    $('a[href="#"]').click(function(){
-      var speed = 500;
-      var href= $(this).attr("href");
-      var target = $(href == "#" || href == "" ? 'html' : href);
-      var position = target.offset().top - 50;
-      $("html, body").animate({scrollTop:position}, speed, "swing");
-      return false;
-    });
-  });
-
-  $(function() {
-
-    /**
-    * 現在スクロール位置によるグローバルナビのアクティブ表示
-    */
-    var scrollMenu = function() {
-      // 配列宣言
-      // ここにスクロールで点灯させる箇所のidを記述する
-      // 数値は全て0でOK
-      var array = {
-        '#sidenav-message': 0,
-        '#sidenav-recruit': 0,
-        '#sidenav-qaa': 0
-      };
-
-      var $globalNavi = new Array();
-
-      // 各要素のスクロール値を保存
-      for (var key in array) {
-        if ($(key).offset()) {
-          array[key] = $(key).offset().top - 10; // 数値丁度だとずれるので10px余裕を作る
-          $globalNavi[key] = $('#sidenav ul li a[href="' + key + '"]');
-        }
-      }
-
-      // スクロールイベントで判定
-      $(window).scroll(function () {
-        for (var key in array) {
-          if ($(window).scrollTop() > array[key] - 50) {
-            $('#sidenav ul li a').each(function() {
-              $(this).removeClass('active');
-            });
-            $globalNavi[key].addClass('active');
-          }
-        }
-      });
-    }
-
-    // 実行
-    scrollMenu();
-  });
-  </script>
-
-  <script>
-  $(function() {
-    var topBtn = $('#page-top');
-    topBtn.hide();
-    //スクロールが100に達したらボタン表示
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 100) {
-        topBtn.fadeIn();
-      } else {
-        topBtn.fadeOut();
-      }
-    });
-    //スクロールしてトップ
-    topBtn.click(function () {
-      $('body,html').animate({
-        scrollTop: 0
-      }, 500);
-      return false;
-    });
-  });
-  </script>
-<?php wp_head();?>
-</head>
-
-<body>
-  <p id="page-top"><a href="#wrap">TOPへ</a></p>
-  <div id="top"></div>
-
-  <div id="sidenav-message"></div>
-  <!-- Navigation -->
-  <nav class="navbar navbar-fixed-top" id="header-nav" role="navigation">
-    <div class="container">
-      <!-- Brand and toggle get grouped for better mobile display -->
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="index.html">RECRUIT SITE</a>
-      </div>
-      <!-- Collect the nav links, forms, and other content for toggling -->
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <p id="header_btn" class="navbar-right__top"><a href="#">資料請求・お問い合わせ</a></p>
-        <ul class="nav navbar-nav navbar-right navbar-right__bottom">
-          <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 求める人物像</a></li>
-          <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 教育体制（人材育成）</a></li>
-          <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 福利厚生</a></li>
-          <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 採用説明会･病院見学</a></li>
-        </ul>
-      </div>
-      <!-- /.navbar-collapse -->
-    </div>
-    <!-- /.container -->
-  </nav>
-
-  <header>
-    <div id="globalnav-area">
-      <div class="container">
-        <table id="globalnav">
-          <tr>
-            <th class="ln00"><a href="#">トップページ</a></th>
-            <th class="ln01"><a href="#">臨床研修医(初期・後期)</a></th>
-            <th class="ln02-now"><a href="#">診療科医師</a></th>
-            <th class="ln03"><a href="#">看護師</a></th>
-            <th class="ln04"><a href="#">メディカルスタッフ</a></th>
-            <th class="ln05"><a href="#">事務系スタッフ</a></th>
-          </tr>
-        </table>
-      </div>
-    </div>
-
-    <div id="localnav-area">
-      <div class="container">
-        <ul id="localnav">
-          <li><a href="#">救急医・総合診療医</a></li>
-          <li><a href="#">集中治療医</a></li>
-          <li><a href="#">泌尿器科医</a></li>
-          <li><a href="#">麻酔科医</a></li>
-          <li><a href="#">病理診療医</a></li>
-          <li><a href="#">神経内科医</a></li>
-          <li><a href="#">総合健診医</a></li>
-          <li><a href="#">消化器内科医</a></li>
-          <li><a href="#">腫瘍内科医</a></li>
-        </ul>
-      </div>
-    </div>
-    <table id="sp-globalnav">
-      <tr>
-        <th><a href="#">トップページ</a></th>
-        <th><a href="#">臨床研修医(初期・後期)</a></th>
-        <th><a href="#">診療科医師</a></th>
-        <th><a href="#">看護師</a></th>
-        <th><a href="#">メディカルスタッフ</a></th>
-        <th><a href="#">事務系スタッフ</a></th>
-      </tr>
-    </table>
-  </header>
+<?php get_header();?>
 
   <section id="content-top">
     <div class="container">
@@ -240,18 +40,19 @@
       </table>
     </div>
     <!-- Image Header -->
+      <div id="sidenav-message"></div>
     <div class="message-area">
       <div class="row">
         <div class="col-lg-12">
-          <img class="img-responsive" src="http://placehold.it/1200x400" alt="" >
+          <img class="img-responsive" src="<?php the_field('トップ画像'); ?>" alt="" width="1200px">
         </div>
       </div>
       <!-- /.row -->
       <!-- main -->
       <div class="message">
         <?php while(have_posts()): the_post(); ?>
- <?php the_content(); ?>
-<?php endwhile; ?>
+        <?php the_content(); ?>
+        <?php endwhile; ?>
       </div>
       <div id="sidenav-recruit"></div>
     </div>
