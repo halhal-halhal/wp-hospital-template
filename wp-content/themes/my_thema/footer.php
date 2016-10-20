@@ -30,7 +30,7 @@
                             <ul>
                               <li> <a href="<?php echo home_url(); ?>/診療科医師/病理診断医">病理診断医</a></li>
                               <li> <a href="<?php echo home_url(); ?>/診療科医師/精神内科医">精神内科医</a></li>
-                              <li> <a href="<?php echo home_url(); ?>/診療科医師/総合検診医">総合健診医</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/診療科医師/総合健診医">総合健診医</a></li>
                               <li> <a href="<?php echo home_url(); ?>/診療科医師/消化器内科医">消化器内科医</a></li>
                               <li> <a href="<?php echo home_url(); ?>/診療科医師/腫瘍内科医">腫瘍内科医</a></li>
                             </ul>
