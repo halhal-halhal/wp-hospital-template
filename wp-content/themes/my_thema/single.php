@@ -17,11 +17,18 @@
   </section>
 
 
-
+<?php
+  $type_name = esc_html(get_post_type_object(get_post_type())->name);
+  if ( $type_name == 'trainee' )       { $rectopix = '臨床研修医';}
+  else if ( $type_name == 'doctor' )   { $rectopix = '診療科医師';}
+  else if ( $type_name == 'nurse' )    { $rectopix = '看護師';}
+  else if ( $type_name == 'co-medical'){ $rectopix = 'メディカルスタッフ';}
+  else if ( $type_name == 'staff' )    { $rectopix = '事務系スタッフ';}
+?>
   <!-- Page Content -->
   <div class="container">
     <div class="content-head">
-      <span class="global-category">診療科医師</span><span class="topix-name">救急医・総合診療医</span>
+      <span class="global-category"><?php echo $rectopix; ?></span><span class="topix-name"><?php the_title();?></span>
       <ul>
         <li class="about-recruit"><a href="#">採用説明会・病院見学について</a></li>
         <li class="back"><a href="#">診療科医師　INDEXに戻る</a></li>
@@ -61,7 +68,7 @@
     <div class="requirements-area">
       <div class="requirements">
         <h3>募集要項</h3>
-        <h4 class="line"><span>救急医・総合診療医募集</span></h4>
+        <h4 class="line"><span><?php the_title();?>募集</span></h4>
         <h5>採用条件</h5>
         <div id="require-table">
           <table>

@@ -266,9 +266,28 @@ header.carousel .fill {
     font-weight: normal;
     vertical-align: middle;
 }
-#wanted a h2 span.pack {
-    letter-spacing: -0.08em;
+
+@media screen and (min-width:1201px){
+    #wanted a h2 span.pack {
+        letter-spacing: -0.08em;
+    }
 }
+
+@media screen and (max-width:480px) and (max-width:481px){
+    #wanted a h2 span.pack {
+        letter-spacing: -0.25em;
+    }
+}
+
+@media screen and (max-width:480px){
+    #wanted h2 {
+        font-size: 0.8em;
+    }
+    #wanted a h2 span.pack {
+        letter-spacing: -0.2em;
+    }
+}
+
 
 #wanted a:hover h2,
 #wanted a:focus h2 {

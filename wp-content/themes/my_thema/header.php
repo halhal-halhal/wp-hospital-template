@@ -161,17 +161,25 @@
     <!-- /.container -->
   </nav>
 
+<?php
+if( is_single() ){
+                    $type_name = esc_html(get_post_type_object(get_post_type())->name);
+                }else{
+                    $type_name = get_post_meta($post->ID , '英語名' ,true);
+                }
+?>
+
   <header>
     <div id="globalnav-area">
       <div class="container">
         <table id="globalnav">
           <tr>
             <th class="ln00<?php if ( is_page('/') ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>">トップページ</a></th>
-            <th class="ln01<?php if ( is_page('臨床研修医') ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/臨床研修医">臨床研修医(初期・後期)</a></th>
-            <th class="ln02<?php if ( is_page('診療科医師') ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/診療科医師">診療科医師</a></th>
-            <th class="ln03<?php if ( is_page('看護師') ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/看護師">看護師</a></th>
-            <th class="ln04<?php if ( is_page('メディカルスタッフ') ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/メディカルスタッフ">メディカルスタッフ</a></th>
-            <th class="ln05<?php if ( is_page('事務系スタッフ') ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/事務系スタッフ">事務系スタッフ</a></th>
+            <th class="ln01<?php if ( $type_name == 'trainee' ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/臨床研修医">臨床研修医(初期・後期)</a></th>
+            <th class="ln02<?php if ( $type_name == 'doctor' ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/診療科医師">診療科医師</a></th>
+            <th class="ln03<?php if ( $type_name == 'nurse' ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/看護師">看護師</a></th>
+            <th class="ln04<?php if ( $type_name == 'co-medical' ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/メディカルスタッフ">メディカルスタッフ</a></th>
+            <th class="ln05<?php if ( $type_name == 'staff' ) { echo '-now'; }?>"><a href="<?php echo home_url(); ?>/事務系スタッフ">事務系スタッフ</a></th>
           </tr>
         </table>
       </div>
@@ -180,11 +188,6 @@
       <div class="container">
          <ul id="localnav">
           <?php 
-                if( is_single() ){
-                    $type_name = esc_html(get_post_type_object(get_post_type())->name);
-                }else{
-                    $type_name = get_post_meta($post->ID , '英語名' ,true);
-                }
                 $wp_query = new WP_Query();
                 $param = array(
                   'posts_per_page' => '-1', //表示件数。-1なら全件表示
