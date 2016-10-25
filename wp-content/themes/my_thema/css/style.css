@@ -427,3 +427,31 @@ header #globalnav-area {
 /*************************
 ********下層ページ********
 **************************/
+/*
+* icon
+*/
+.icon_事務系スタッフ span {
+    border: solid 2px rgb(181, 142, 40);
+    color: rgb(181, 142, 40);
+}
+.icon_臨床研修医 span {
+    border: solid 2px rgb(128, 208, 237);
+    color: rgb(128, 208, 237);
+}
+.icon_診療科医師 span {
+    border: solid 2px rgb(34, 25, 135);
+    color: rgb(34, 25, 135);
+}
+.icon_看護師 span {
+    border: solid 2px rgb(241, 66, 192);
+    color: rgb(241, 66, 192);
+}
+.icon_メディカルスタッフ span {
+    border: solid 2px rgb(153, 198, 102);
+    color: rgb(153, 198, 102);
+}
+ .icon_その他 span {
+    border: solid 2px rgba(40, 40, 40, 0.4);
+    color: rgba(40, 40, 40, 0.4);
+}
+ 

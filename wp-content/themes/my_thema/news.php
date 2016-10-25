@@ -43,7 +43,6 @@
         $param = array(
           'posts_per_page' => '6', //表示件数。-1なら全件表示
           'post_type' => 'news', //カスタム投稿タイプの名称を入れる
-          'ジャンル名' => '',
           'post_status' => 'publish', //取得するステータス。publishなら一般公開のもののみ
           'orderby' => 'DATE', //ID順に並び替え→DATE順
           'order' => 'ASC'

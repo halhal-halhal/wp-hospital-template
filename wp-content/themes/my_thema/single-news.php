@@ -212,7 +212,7 @@ if( is_single() ){
         <div class="col-lg-12">
           <ol class="breadcrumb">
             <li><a href="<?php echo home_url(); ?>">Home</a></li>
-            <li><a href="<?php echo home_url(); ?>/<?php echo esc_html(get_post_type_object(get_post_type())->label); ?>"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></a></li>
+            <li><a href="<?php echo home_url(); ?>/ニュース"><?php echo esc_html(get_post_type_object(get_post_type())->label); ?></a></li>
             <li class="active"><?php the_title(); ?></li>
           </ol>
         </div>
@@ -234,23 +234,8 @@ if( is_single() ){
   <div class="container">
     <div class="content-head">
 
-      <ul>
-        <li class="about-recruit"><a href="#">採用説明会・病院見学について</a></li>
-        <li class="back"><a href="#">診療科医師　INDEXに戻る</a></li>
-      </ul>
     </div>
-    <div class="content-menu">
-      <table class="content-table">
-        <tr class="content-tr">
-          <th>救急医・総合診療医</th>
-          <th>部長インタビュー</th>
-          <th>センターの特徴</th>
-          <th>教育・研修体制</th>
-          <th>診療実績・学術研究業績</th>
-          <th>取り組み・イベント</th>
-        </tr>
-      </table>
-    </div>
+  
     <!-- Image Header -->
         <div class="message-area">
       <div class="row">
@@ -274,8 +259,35 @@ if( is_single() ){
         <?php the_content(); ?>
         <?php endwhile; ?>
         <?php echo do_shortcode('[social4i size="small"]');?>
+         <hr style="border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;">
+    <h4>関連記事</h4>
+     <?php
+        $type = get_post_meta($post->ID , 'ジャンル名' ,true);
+        $wp_query = new WP_Query();
+        $param = array(
+          'posts_per_page' => '6', //表示件数。-1なら全件表示
+          'post_type' => 'news', //カスタム投稿タイプの名称を入れる
+          'meta_value' => $type,
+          'post_status' => 'publish', //取得するステータス。publishなら一般公開のもののみ
+          'orderby' => 'DATE', //ID順に並び替え→DATE順
+          'order' => 'ASC'
+        );
+        $wp_query->query($param);?>
+            
+                <table class="news-table">
+                 <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?><tr>
+                <th><div class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></th>
+                  <td><?php the_time(Y年n月j日); ?></td>
+                  <td><a href="<?php the_permalink(); ?>"><?php the_title();?></a></td>
+                </li></tr>
+              <?php endwhile; endif; ?>
+              </table>
+              <?php wp_reset_query(); ?>
+              </ul>
       </div>
-      <div id="sidenav-recruit"></div>
     </div>
 
 

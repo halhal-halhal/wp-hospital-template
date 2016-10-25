@@ -37,7 +37,7 @@
           <div id="news-area__inner">
             <div class="col-md-3 col-sm-12 col-xs-12">
               <p>NEWS & INFORAMATION</p>
-<?php
+      <?php
         $type_name = get_post_meta($post->ID , '英語名' ,true);
         $wp_query = new WP_Query();
         $param = array(

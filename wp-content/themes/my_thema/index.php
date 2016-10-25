@@ -110,22 +110,28 @@
           <div id="news-area__inner">
             <div class="col-md-3 col-sm-4 col-xs-12">
               <p>NEWS & INFORAMATION</p>
-              <p id="news-area__btn"><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> 一覧ページへ</a></p>
+              <p id="news-area__btn"><a href="<?php echo home_url(); ?>/ニュース"><i class="fa fa-caret-right" aria-hidden="true"></i> 一覧ページへ</a></p>
             </div>
             <div class="col-md-9 col-sm-8 col-xs-12">
-              <ul>
-                <li class="icon_staff">
-                  <span>事務系スタッフ</span>
-                  <a href="#">2016/09/29テキストテキストテキストテキスト</a>
+              <?php
+        $type_name = get_post_meta($post->ID , '英語名' ,true);
+        $wp_query = new WP_Query();
+        $param = array(
+          'posts_per_page' => '3', //表示件数。-1なら全件表示
+          'post_type' => 'news', //カスタム投稿タイプの名称を入れる
+          'post_status' => 'publish', //取得するステータス。publishなら一般公開のもののみ
+          'orderby' => 'DATE', //ID順に並び替え→DATE順
+          'order' => 'ASC'
+        );
+        $wp_query->query($param);?>
+            <ul>
+                 <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?>
+                <li class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span>
+                  <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
                 </li>
-                <li class="icon_trainer">
-                  <span>臨床研修医</span>
-                  <a href="#">2016/08/29テキストテキストテキストテキスト</a>
-                </li>
-                <li class="icon_staff">
-                  <span>事務系スタッフ</span>
-                  <a href="#">2016/07/19テキストテキストテキストテキスト</a>
-                </li>
+              <?php endwhile; endif; ?>
+              <?php wp_reset_query(); ?>
               </ul>
             </div>
           </div>
