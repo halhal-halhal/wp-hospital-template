@@ -641,15 +641,7 @@ html,body{
   }
 }
 
-#globalnav a:visited{
-      color: rgba(64,64,64,0.7);
-}  
-#localnav a:visited{
-      color: rgba(64,64,64,0.7);
-}  
-footer a:visited{
-      color: rgba(64,64,64,0.7);
-}  
+
 /**
 /*  indxbox
 /*             */
@@ -1341,4 +1333,63 @@ div.send-to-area{
     border: solid 2px rgb(153, 198, 102);
     color: rgb(153, 198, 102);
 }
+ .icon_その他 span {
+    border: solid 2px rgba(40, 40, 40, 0.4);
+    color: rgba(40, 40, 40, 0.4);
+}
  
+ 
+ 
+.global-category-doctor{
+  color: blue;
+  padding: 4px 7px;
+  font-weight: bold;
+  border: 1px solid blue;
+}
+.global-category-trainer{
+  color: rgb(128, 208, 237);
+  padding: 4px 7px;
+  font-weight: bold;
+  border: 1px solid rgb(128, 208, 237);
+}
+.global-category-nurse{
+  color: rgb(241, 66, 192);
+  padding: 4px 7px;
+  font-weight: bold;
+  border: 1px solid rgb(241, 66, 192);
+}
+.global-category-co_medical{
+  color: rgb(153, 198, 102);
+  padding: 4px 7px;
+  font-weight: bold;
+  border: 1px solid rgb(153, 198, 102);
+}
+.global-category-staff{
+  color: rgb(181, 142, 40);
+  padding: 4px 7px;
+  font-weight: bold;
+  border: 1px solid rgb(181, 142, 40);
+}
+
+#wanted a:hover{
+  text-decoration: none;
+}
+
+table.news-table{
+  padding: 2em;
+}
+.news-table tr{
+  padding-top: 1.5em;
+  line-height: 3em;
+  padding-bottom: 1.5em;
+}
+.news-table th{
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+.news-table td{
+  color: rgba(30,30,30,0.9);
+  font-weight: bold;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}

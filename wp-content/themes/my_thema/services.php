@@ -54,14 +54,14 @@
                  <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?>
                 <li class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
                   <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span>
-                  <a href="#"><?php the_title();?></a>
+                  <a href="<?php the_permalink(); ?>"><?php the_title();?></a>
                 </li>
               <?php endwhile; endif; ?>
               <?php wp_reset_query(); ?>
               </ul>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-12">
-              <p id="news-area__btn"><a href="#"><i class="fa fa-caret-right" aria-hidden="true"></i> 一覧ページへ</a></p>
+              <p id="news-area__btn"><a href="<?php echo home_url(); ?>/ニュース"><i class="fa fa-caret-right" aria-hidden="true"></i> 一覧ページへ</a></p>
             </div>
           </div>
         </div>
