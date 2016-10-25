@@ -118,7 +118,7 @@
                   <span>事務系スタッフ</span>
                   <a href="#">2016/09/29テキストテキストテキストテキスト</a>
                 </li>
-                <li class="icon_trainee">
+                <li class="icon_trainer">
                   <span>臨床研修医</span>
                   <a href="#">2016/08/29テキストテキストテキストテキスト</a>
                 </li>
