@@ -159,121 +159,29 @@
         </section>
 
         <!-- wanted Section -->
+        <?php
+        $wp_query = new WP_Query();
+        $param = array(
+          'posts_per_page' => '16', //表示件数。-1なら全件表示
+          'post_type' => array('doctor','nurse','co_medical','trainer','staff'),
+          'meta_value' => '掲載する',
+          'post_status' => 'publish', //取得するステータス。publishなら一般公開のもののみ
+          'orderby' => 'DATE', //ID順に並び替え→DATE順
+          'order' => 'ASC'
+        );
+        $wp_query->query($param);?>
         <section id="wanted">
           <div class="container">
           <div class="row">
+            <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?>
               <div class="col-xs-6 col-sm-4 col-md-3">
                   <a href="#">
-                      <h2><span class="badge">募集中</span>初期臨床研修医</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
+                      <h2 style="white-space: nowrap;>"><span class="badge"><?php echo get_field('募集'); ?></span><?php if(get_the_title() == '医療ソーシャルワーカー'){echo '医療<span class="pack">ソーシャルワーカー<span>';}else{the_title();}?></h2>
+                      <img class="img-responsive img-portfolio img-hover" src="<?php echo get_field('顔写真'); ?>" alt="">
                   </a>
               </div>
-              <!-- ./1人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>後期臨床研修医</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./2人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>診療科医師</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./3人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>看護師</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./4人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>薬剤師</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./5人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>臨床検査技師</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./6人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>言語聴覚士</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./7人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>診療放射線技師</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./8人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>臨床工学技師</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./9人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>管理栄養士</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./10人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>理学療法士</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./11人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>作業療法士</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./12人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>医療<span class="pack">ソーシャルワーカー<span></h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./13人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>介護福祉士</h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./14人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>経営<span class="pack">マネジメントスタッフ</span></h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./15人目 -->
-              <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
-                      <h2><span class="badge">募集中</span>その他<span class="pack">スタッフ</span></h2>
-                      <img class="img-responsive img-portfolio img-hover" src="<?php bloginfo('template_directory'); ?>/images/top/doctor_top.jpg" alt="">
-                  </a>
-              </div>
-              <!-- ./16人目 -->
+              <?php endwhile; endif; ?>
+          <?php wp_reset_query(); ?>
           </div>
           <!-- /.row -->
         </div>
