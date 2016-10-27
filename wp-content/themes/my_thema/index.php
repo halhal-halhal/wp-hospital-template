@@ -175,7 +175,7 @@
           <div class="row">
             <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?>
               <div class="col-xs-6 col-sm-4 col-md-3">
-                  <a href="#">
+                  <a href="<?php the_permalink(); ?>">
                       <h2 style="white-space: nowrap;>"><span class="badge"><?php echo get_field('募集'); ?></span><?php if(get_the_title() == '医療ソーシャルワーカー'){echo '医療<span class="pack">ソーシャルワーカー<span>';}else{the_title();}?></h2>
                       <img class="img-responsive img-portfolio img-hover" src="<?php echo get_field('顔写真'); ?>" alt="">
                   </a>
