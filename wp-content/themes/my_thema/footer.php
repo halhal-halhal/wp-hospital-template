@@ -38,13 +38,13 @@
                         </dl>
                         <!--./診療科医師-->
                         <dl>
-                          <dt><a href="#">看護師</a></dt>
+                          <dt><a href="<?php echo home_url(); ?>/看護師">看護師</a></dt>
                           <dd>
                             <ul>
-                              <li> <a href="#">初期臨床研修医</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/看護師/看護師">看護師</a></li>
                             </ul>
                             <ul>
-                              <li> <a href="#">後期臨床研修医</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/看護師/介護福祉士・看護助手">介護福祉士・看護助手</a></li>
                             </ul>
                           </dd>
                         </dl>
@@ -53,34 +53,34 @@
                     <!--./col-->
                     <div class="col-sm-4 col-md-4">
                       <dl>
-                          <dt><a href="#">メディカルスタッフ</a></dt>
+                          <dt><a href="<?php echo home_url(); ?>/メディカルスタッフ">メディカルスタッフ</a></dt>
                           <dd>
                             <ul>
-                              <li> <a href="#">薬剤師</a></li>
-                              <li> <a href="#">臨床検査技師</a></li>
-                              <li> <a href="#">言語聴覚士</a></li>
-                              <li> <a href="#">診療放射線技師</a></li>
-                              <li> <a href="#">臨床工学技師</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/薬剤師">薬剤師</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/臨床検査技師">臨床検査技師</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/言語聴覚士">言語聴覚士</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/診療放射線技師">診療放射線技師</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/臨床工学技士">臨床工学技師</a></li>
                             </ul>
                             <ul>
-                              <li> <a href="#">管理栄養士</a></li>
-                              <li> <a href="#">理学療法士</a></li>
-                              <li> <a href="#">作業療法士</a></li>
-                              <li> <a href="#">医療ソーシャルワーカー</a></li>
-                              <li> <a href="#">介護福祉士</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/管理栄養士">管理栄養士</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/理学療法士">理学療法士</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/作業療法士">作業療法士</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/医療ソーシャルワーカー">医療ソーシャルワーカー</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/メディカルスタッフ/介護福祉士">介護福祉士</a></li>
                             </ul>
                           </dd>
                         </dl>
                         <!--./メディカルスタッフ-->
                         <dl>
-                          <dt><a href="#">事務系スタッフ</a></dt>
+                          <dt><a href="<?php echo home_url(); ?>/事務系スタッフ">事務系スタッフ</a></dt>
                           <dd>
                             <ul>
-                              <li> <a href="#">経営マネジメントスタッフ</a></li>
-                              <li> <a href="#">医療秘書</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/事務系スタッフ/経営マネジメントスタッフ">経営マネジメントスタッフ</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/事務系スタッフ/医療秘書">医療秘書</a></li>
                             </ul>
                             <ul>
-                              <li> <a href="#">その他スタッフ</a></li>
+                              <li> <a href="<?php echo home_url(); ?>/事務系スタッフ/その他スタッフ">その他スタッフ</a></li>
                             </ul>
                           </dd>
                         </dl>

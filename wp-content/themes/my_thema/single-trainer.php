@@ -138,23 +138,39 @@
         </div>
       </div>
 
+ <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>
       <div id="sidenav-qaa"></div>
       <div class="qaa-area">
         <div class="qaa">
           <h3>Q&A</h3>
-          <h4 class="line"><span>救急医・総合診療医についての質問</span></h4>
+          <h4 class="line"><span><?php the_title();?>についての質問</span></h4>
+        
           <div class="qaa-content">
-            <span class="q">勤務体制はどのようになっていますか。</span>
+            <span class="q"><?php echo get_post_meta($post->ID , 'q_1' ,true);?></span>
             <p class="a">
-              当院では、部分的交替勤務制を導入しています。<br>
-              土日祝日の日勤帯は2名の交替勤務制にして、平日に振替休日としています。<br>
-              長時間勤務、連続勤務が緩和されオンとオフの切り替えが明確になっています。<br>
-
-              →詳しくはこちら
+              <?php echo get_post_meta($post->ID , 'a_1' ,true);?>
             </p>
           </div>
+
+          <?php if(get_post_meta($post->ID , 'q_2' ,true) != ""): ?>
+          <div class="qaa-content">
+            <span class="q"><?php echo get_post_meta($post->ID , 'q_2' ,true);?></span>
+            <p class="a">
+              <?php echo get_post_meta($post->ID , 'a_2' ,true);?>
+            </p>
+          </div>
+          <?php endif?>
+          <?php if(get_post_meta($post->ID , 'q_3' ,true) != ""): ?>
+          <div class="qaa-content">
+            <span class="q"><?php echo get_post_meta($post->ID , 'q_3' ,true);?></span>
+            <p class="a">
+              <?php echo get_post_meta($post->ID , 'a_3' ,true);?>
+            </p>
+          </div>
+          <?php endif?>
         </div>
       </div>
+          <?php endif?>
 
       <hr>
       <!-- sidenav-->
@@ -162,147 +178,11 @@
         <ul>
           <li><a href="#sidenav-message">メッセージ</a></li>
           <li><a href="#sidenav-recruit">募集要項</a></li>
+           <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>
           <li><a href="#sidenav-qaa">Q&A</a></li>
+          <?php endif?>
         </ul>
       </div>
       <!-- Footer -->
     </div>
-    <footer>
-      <div class="container">
-        <div id="footer_inner">
-          <div class="row">
-            <div class="col-sm-4 col-md-4">
-              <dl>
-                <dt><a href="#">臨床研修医</a></dt>
-                <dd>
-                  <ul>
-                    <li> <a href="#">初期臨床研修医</a></li>
-                  </ul>
-                  <ul>
-                    <li> <a href="#">後期臨床研修医</a></li>
-                  </ul>
-                </dd>
-              </dl>
-              <!--./臨床研修医-->
-              <dl>
-                <dt><a href="#">診療科医師</a></dt>
-                <dd>
-                  <ul>
-                    <li> <a href="#">救急医・総合診療医</a></li>
-                    <li> <a href="#">集中治療医</a></li>
-                    <li> <a href="#">泌尿器科医</a></li>
-                    <li> <a href="#">麻酔科医</a></li>
-                  </ul>
-                  <ul>
-                    <li> <a href="#">病理診断医</a></li>
-                    <li> <a href="#">精神内科医</a></li>
-                    <li> <a href="#">総合健診医</a></li>
-                    <li> <a href="#">消化器内科医</a></li>
-                    <li> <a href="#">腫瘍内科医</a></li>
-                  </ul>
-                </dd>
-              </dl>
-              <!--./診療科医師-->
-              <dl>
-                <dt><a href="#">看護師</a></dt>
-                <dd>
-                  <ul>
-                    <li> <a href="#">初期臨床研修医</a></li>
-                  </ul>
-                  <ul>
-                    <li> <a href="#">後期臨床研修医</a></li>
-                  </ul>
-                </dd>
-              </dl>
-              <!--./看護師-->
-            </div>
-            <!--./col-->
-            <div class="col-sm-4 col-md-4">
-              <dl>
-                <dt><a href="#">メディカルスタッフ</a></dt>
-                <dd>
-                  <ul>
-                    <li> <a href="#">薬剤師</a></li>
-                    <li> <a href="#">臨床検査技師</a></li>
-                    <li> <a href="#">言語聴覚士</a></li>
-                    <li> <a href="#">診療放射線技師</a></li>
-                    <li> <a href="#">臨床工学技師</a></li>
-                  </ul>
-                  <ul>
-                    <li> <a href="#">管理栄養士</a></li>
-                    <li> <a href="#">理学療法士</a></li>
-                    <li> <a href="#">作業療法士</a></li>
-                    <li> <a href="#">医療ソーシャルワーカー</a></li>
-                    <li> <a href="#">介護福祉士</a></li>
-                  </ul>
-                </dd>
-              </dl>
-              <!--./メディカルスタッフ-->
-              <dl>
-                <dt><a href="#">事務系スタッフ</a></dt>
-                <dd>
-                  <ul>
-                    <li> <a href="#">経営マネジメントスタッフ</a></li>
-                    <li> <a href="#">医療秘書</a></li>
-                  </ul>
-                  <ul>
-                    <li> <a href="#">その他スタッフ</a></li>
-                  </ul>
-                </dd>
-              </dl>
-              <!--./事務系スタッフ-->
-            </div>
-            <!--./col-->
-            <div class="col-sm-4 col-md-4">
-              <p>採用に関するお問い合わせ先</p>
-              <h3>[人事室直通] <span>03-0000-0000</span></h3>
-              <p id="footer_btn"><a href="#">資料請求・お問い合わせ</a></p>
-              <p>社会福祉法人 恩賜財団 済生会熊本病院</p>
-              <address>〒861-4193 熊本市南区近見5丁目3番1号</address>
-            </div>
-            <!--./col-->
-          </div>
-          <!--./row-->
-        </div>
-        <!--./#footer_inner-->
-      </div>
-      <!--./container-->
-      <div id="footer_nav">
-        <div class="container-fluid">
-          <div class="row">
-            <ul id="footer_nav__inner">
-              <li><a href="#">トップページ</a></li>
-              <li><a href="#">求める人物像</a></li>
-              <li><a href="#">教育体制(人材育成)プログラム</a></li>
-              <li><a href="#">福利厚生</a></li>
-              <li><a href="#">採用説明会・病院見学について</a></li>
-            </ul>
-          </div>
-          <!--./row-->
-        </div>
-        <!--./#footer_nav-->
-      </div>
-      <p id="copy">©2016 HOSPITAL ALL RIGHT RESERVED.</p>
-    </footer>
-
-  </div>
-  <!-- /.container -->
-
-  <!-- jQuery -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-
-
-  <!-- Bootstrap Core JavaScript -->
-  <script src="<?php bloginfo('template_url' ); ?>/js/bootstrap.min.js"></script>
-
-  <!-- Script to Activate the Carousel -->
-  <script>
-  $('.carousel').carousel({
-    interval: 5000 //changes the speed
-  })
-  </script>
-<?php wp_footer(); ?>
-</body>
-
-
-</html>
+  <?php get_footer();?>

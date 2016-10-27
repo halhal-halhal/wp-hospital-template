@@ -454,4 +454,11 @@ header #globalnav-area {
     border: solid 2px rgba(40, 40, 40, 0.4);
     color: rgba(40, 40, 40, 0.4);
 }
- 
+
+a:visited{
+    color: rgba(67,67,67,0.6);
+}
+
+a:hover{
+    text-decoration: none;
+}
