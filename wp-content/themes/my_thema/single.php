@@ -138,31 +138,48 @@
         </div>
       </div>
 
+  <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>
       <div id="sidenav-qaa"></div>
       <div class="qaa-area">
         <div class="qaa">
           <h3>Q&A</h3>
-          <h4 class="line"><span>救急医・総合診療医についての質問</span></h4>
+          <h4 class="line"><span><?php the_title();?>についての質問</span></h4>
+        
           <div class="qaa-content">
-            <span class="q">勤務体制はどのようになっていますか。</span>
+            <span class="q"><?php echo get_post_meta($post->ID , 'q_1' ,true);?></span>
             <p class="a">
-              当院では、部分的交替勤務制を導入しています。<br>
-              土日祝日の日勤帯は2名の交替勤務制にして、平日に振替休日としています。<br>
-              長時間勤務、連続勤務が緩和されオンとオフの切り替えが明確になっています。<br>
-
-              →詳しくはこちら
+              <?php echo get_post_meta($post->ID , 'a_1' ,true);?>
             </p>
           </div>
+
+          <?php if(get_post_meta($post->ID , 'q_2' ,true) != ""): ?>
+          <div class="qaa-content">
+            <span class="q"><?php echo get_post_meta($post->ID , 'q_2' ,true);?></span>
+            <p class="a">
+              <?php echo get_post_meta($post->ID , 'a_2' ,true);?>
+            </p>
+          </div>
+          <?php endif?>
+          <?php if(get_post_meta($post->ID , 'q_3' ,true) != ""): ?>
+          <div class="qaa-content">
+            <span class="q"><?php echo get_post_meta($post->ID , 'q_3' ,true);?></span>
+            <p class="a">
+              <?php echo get_post_meta($post->ID , 'a_3' ,true);?>
+            </p>
+          </div>
+          <?php endif?>
         </div>
       </div>
-
+          <?php endif?>
       <hr>
       <!-- sidenav-->
       <div id="sidenav">
         <ul>
           <li><a href="#sidenav-message">メッセージ</a></li>
           <li><a href="#sidenav-recruit">募集要項</a></li>
+            <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>
           <li><a href="#sidenav-qaa">Q&A</a></li>
+                    <?php endif?>
         </ul>
       </div>
       <!-- Footer -->

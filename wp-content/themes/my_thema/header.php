@@ -72,8 +72,9 @@
       // 数値は全て0でOK
       var array = {
         '#sidenav-message': 0,
-        '#sidenav-recruit': 0,
+        '#sidenav-recruit': 0  <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>,
         '#sidenav-qaa': 0
+        <?php endif?>
       };
 
       var $globalNavi = new Array();
