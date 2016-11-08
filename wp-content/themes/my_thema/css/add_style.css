@@ -828,13 +828,28 @@ a.index-menu:hover{
 /*
 * content-menu
 *         */
+.content-menu .doctor{
+  background-color: rgb(34, 25, 135);
+}
+.content-menu .trainer{
+  background-color: rgb(128, 208, 237);
+}
+.content-menu .nurse{
+  background-color: rgb(241, 66, 192);
+}
+.content-menu .co_medical{
+  background-color: rgb(153, 198, 102);
+}
+.content-menu .staff{
+  background-color: rgb(181, 142, 40);
+}
+
 @media screen and (min-width: 993px) {
   div.content-menu{
     margin: 0;
   }
 
   div.content-menu table{
-    background-color: rgba(52, 86, 187, 0.8);
     width: 100%;
     margin-top: 1em;
     height: 3em;
@@ -940,15 +955,33 @@ div.message-area{
 }
 .message h3{
   padding-top: 1em;
-  color: rgb(59, 145, 187);
   width: 100%;
-  border-bottom: 2px dotted rgb(59, 145, 187);
   margin-bottom: 1em;
 }
 .message h4{
   font-weight: bolder;
 }
 
+.message .doctor h3{
+  color: rgb(34, 25, 135);
+  border-bottom: 2px dotted rgb(34, 25, 135);
+}
+.message .trainer h3{
+  color: rgb(128, 208, 237);
+  border-bottom: 2px dotted rgb(128, 208, 237);
+}
+.message .nurse h3{
+  color: rgb(241, 66, 192);
+  border-bottom: 2px dotted rgb(241, 66, 192);
+}
+.message .co_medical h3{
+  color: rgb(153, 198, 102);
+  border-bottom: 2px dotted rgb(153, 198, 102);
+}
+.message .staff h3{
+  color: rgb(181, 142, 40);
+  border-bottom: 2px dotted rgb(181, 142, 40);
+}
 
 /*
 *   requirements
@@ -1214,9 +1247,9 @@ div.send-to-area{
   width: 100%;
   font-weight: bolder;
 }
-.qaa h3:before{
+.qaa h3.doctor:before{
   content:'>';
-  margin-top: 0.75em;
+  margin-top: 0.4em;
   margin-left: -3em;
   padding-top: 0.3em;
   padding-left: 0.5em;
@@ -1231,18 +1264,104 @@ div.send-to-area{
   color: rgba(255,255,255,0.9);
   background-color: rgba(55, 55, 200, 0.8);
 }
+.qaa h3.trainer:before{
+  content:'>';
+  margin-top: 0.4em;
+  margin-left: -3em;
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  border-radius:30px;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  height:1.8em;
+  width:1.8em;
+  font-size: 20%;
+  position: absolute;
+  display:inline-block;
+  color: rgba(255,255,255,0.9);
+background-color: rgba(128, 208, 237, 0.8);
+}
+.qaa h3.nurse:before{
+  content:'>';
+  margin-top: 0.4em;
+  margin-left: -3em;
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  border-radius:30px;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  height:1.8em;
+  width:1.8em;
+  font-size: 20%;
+  position: absolute;
+  display:inline-block;
+  color: rgba(255,255,255,0.9);
+  background-color: rgba(241, 66, 192, 0.8);
+}
+.qaa h3.co_medical:before{
+  content:'>';
+  margin-top: 0.4em;
+  margin-left: -3em;
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  border-radius:30px;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  height:1.8em;
+  width:1.8em;
+  font-size: 20%;
+  position: absolute;
+  display:inline-block;
+  color: rgba(255,255,255,0.9);
+  background-color: rgba(153, 198, 102, 0.8);
+}
+.qaa h3.staff:before{
+  content:'>';
+  margin-top: 0.4em;
+  margin-left: -3em;
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  border-radius:30px;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  height:1.8em;
+  width:1.8em;
+  font-size: 20%;
+  position: absolute;
+  display:inline-block;
+  color: rgba(255,255,255,0.9);
+  background-color: rgba(181, 142, 40, 0.8);
+}
 .qaa h4.line{
   font-weight: bold;
   margin-top:0.5em;
-  color: rgb(16, 13, 122);
   padding-bottom:0.5em;
-  border-top:2px solid rgb(16, 13, 122);
 }
 .qaa h4.line span{
   margin:-0.5em 0 0;
   padding-right: 0.5em;
   float:left;
   background:rgb(233, 233, 233);
+}
+.qaa h4.doctor{
+  color: rgb(34, 25, 135);
+  border-top:2px solid rgb(16, 13, 122);
+}
+.qaa h4.trainer{
+  color: rgb(128, 208, 237);
+  border-top:2px solid rgb(128, 208, 237);
+}
+.qaa h4.nurse{
+  color: rgb(241, 66, 192);
+  border-top:2px solid rgb(241, 66, 192);
+}
+.qaa h4.co_medical{
+  color: rgb(153, 198, 102);
+  border-top:2px solid rgb(153, 198, 102);
+}
+.qaa h4.staff{
+  color: rgb(181, 142, 40);
+  border-top:2px solid rgb(181, 142, 40);
 }
 
 .qaa h5{
@@ -1263,6 +1382,43 @@ div.send-to-area{
   font-weight: bold;
 }
 
+.qaa-content .doctor .q:before{
+  background-color: rgb(34, 25, 135);
+}
+.qaa-content .trainer .q:before{
+  background-color: rgb(128, 208, 237);
+}
+.qaa-content .nurse .q:before{
+  background-color: rgb(241, 66, 192);
+}
+.qaa-content .co_medical .q:before{
+  background-color: rgb(153, 198, 102);
+}
+.qaa-content .staff .q:before{
+  background-color: rgb(181, 142, 40);
+}
+
+.qaa-content .doctor .a:before{
+  color: rgb(34, 25, 135);
+  background-color: rgba(34, 25, 135, 0.3);
+}
+.qaa-content .trainer .a:before{
+  color: rgb(128, 208, 237);
+  background-color: rgba(128, 208, 237, 0.3);
+}
+.qaa-content .nurse .a:before{
+  color: rgb(241, 66, 192);
+  background-color: rgba(241, 66, 192, 0.3);
+}
+.qaa-content .co_medical .a:before{
+  color: rgb(153, 198, 102);
+  background-color: rgba(153, 198, 102, 0.3);
+}
+.qaa-content .staff .a:before{
+  color: rgb(181, 142, 40);
+  background-color: rgba(181, 142, 40, 0.3);
+}
+
 .qaa-content .q:before{
   content: "Q";
   font-size: 1.5em;
@@ -1278,7 +1434,7 @@ div.send-to-area{
 
   -webkit-border-radius:10px;
   -moz-border-radius:10px;
-  background-color: rgb(50, 73, 153);
+/*  background-color: rgb(50, 73, 153);*/
 }
 
 .qaa-content .a{
@@ -1289,7 +1445,7 @@ div.send-to-area{
 .qaa-content .a:before{
   content: "A";
   font-size: 1.5em;
-  color: rgb(50, 73, 153);
+  /*color: rgb(50, 73, 153);*/
   width: 1.1em;
   padding-bottom: 0.1em;
   padding-left: 0.2em;
@@ -1301,7 +1457,7 @@ div.send-to-area{
 
   -webkit-border-radius:10px;
   -moz-border-radius:10px;
-  background-color: rgb(166, 175, 208);
+/*  background-color: rgb(166, 175, 208); */
 }
 
 

@@ -35,7 +35,7 @@
       </ul>
     </div>
     <div class="content-menu">
-      <table class="content-table">
+      <table class="content-table <?php echo $type_name;?>">
         <tr class="content-tr">
           <th>救急医・総合診療医</th>
           <th>部長インタビュー</th>
@@ -57,9 +57,11 @@
       <!-- /.row -->
       <!-- main -->
       <div class="message">
+        <div class="<?php echo $type_name;?>">
         <?php while(have_posts()): the_post(); ?>
         <?php the_content(); ?>
         <?php endwhile; ?>
+        </div>
       </div>
       <div id="sidenav-recruit"></div>
     </div>
@@ -169,30 +171,36 @@
       <div id="sidenav-qaa"></div>
       <div class="qaa-area">
         <div class="qaa">
-          <h3>Q&A</h3>
-          <h4 class="line <?php echo $type_name; ?>><span><?php the_title();?>についての質問</span></h4>
+          <h3 class="<?php echo $type_name; ?>">Q&A</h3>
+          <h4 class="line <?php echo $type_name; ?>"><span><?php the_title();?>についての質問</span></h4>
         
           <div class="qaa-content">
+            <div class="<?php echo $type_name;?>">
             <span class="q"><?php echo get_post_meta($post->ID , 'q_1' ,true);?></span>
             <p class="a">
               <?php echo get_post_meta($post->ID , 'a_1' ,true);?>
             </p>
+            </div>
           </div>
 
           <?php if(get_post_meta($post->ID , 'q_2' ,true) != ""): ?>
           <div class="qaa-content">
+            <div class="<?php echo $type_name;?>">
             <span class="q"><?php echo get_post_meta($post->ID , 'q_2' ,true);?></span>
             <p class="a">
               <?php echo get_post_meta($post->ID , 'a_2' ,true);?>
             </p>
           </div>
+          </div>
           <?php endif?>
           <?php if(get_post_meta($post->ID , 'q_3' ,true) != ""): ?>
           <div class="qaa-content">
+            <div class="<?php echo $type_name;?>">
             <span class="q"><?php echo get_post_meta($post->ID , 'q_3' ,true);?></span>
             <p class="a">
               <?php echo get_post_meta($post->ID , 'a_3' ,true);?>
             </p>
+          </div>
           </div>
           <?php endif?>
         </div>
