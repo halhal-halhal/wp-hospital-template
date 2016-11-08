@@ -865,7 +865,7 @@ a.index-menu:hover{
   div.content-menu table th:hover{
     text-align: center;
     color: white;
-    background-color: rgba(24, 24, 132, 0.5);
+    background-color: rgba(24, 24, 24, 0.5);
     margin: 3px;
     border: solid 2px rgb(4, 4, 22);
   }
