@@ -67,8 +67,8 @@
 
     <div class="requirements-area">
       <div class="requirements">
-        <h3>募集要項</h3>
-        <h4 class="line"><span><?php the_title();?>募集</span></h4>
+        <h3 class="<?php echo $type_name; ?>">募集要項</h3>
+        <h4 class="line <?php echo $type_name; ?>"><span><?php the_title();?>募集</span></h4>
         <?php if(get_post_meta($post->ID , '募集' ,true)=='募集終了'):?>
         <h4>今年度の募集は修了致しました。</h4>
         <?php else:?>
@@ -143,7 +143,7 @@
       <div class="qaa-area">
         <div class="qaa">
           <h3>Q&A</h3>
-          <h4 class="line"><span><?php the_title();?>についての質問</span></h4>
+          <h4 class="line <?php echo $type_name; ?>"><span><?php the_title();?>についての質問</span></h4>
         
           <div class="qaa-content">
             <span class="q"><?php echo get_post_meta($post->ID , 'q_1' ,true);?></span>
