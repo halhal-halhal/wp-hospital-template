@@ -78,39 +78,83 @@
         <div id="require-table">
           <table>
             <tr>
-              <td>採用日</td><th><?php echo get_post_meta($post->ID , '採用日' ,true); ?></th>
-            </tr>
-            <tr>
-              <td>職位</td><th><?php echo get_post_meta($post->ID , '職位' ,true); ?></th>
-            </tr>
-            <tr>
-              <td>給与</td><th><?php echo get_post_meta($post->ID , '給与' ,true); ?></th>
-            </tr>
-            <tr>
-              <td>保険</td><th><?php echo get_post_meta($post->ID , '保険' ,true); ?></th>
-            </tr>
-            <tr>
-              <td>宿舎の有無</td><th><?php echo get_post_meta($post->ID , '宿舎の有無' ,true); ?></th>
-            </tr>
-            <tr>
-              <td>福利厚生</td><th><?php echo get_post_meta($post->ID , '福利厚生' ,true); ?></th>
-              </tr>
-              <tr>
-                <td>応募書類</td><th><?php echo get_post_meta($post->ID , '応募書類' ,true); ?></th>
-              </tr>
-              <tr>
-                <td>応募締切日</td><th><?php echo get_post_meta($post->ID , '応募締切日' ,true); ?></th>
-              </tr>
-              <tr>
-                <td>選考方法</td><th><?php echo get_post_meta($post->ID , '選考方法' ,true); ?></th>
-              </tr>
-              <tr>
-                <td>選考日</td><th><?php echo get_post_meta($post->ID , '選考日' ,true); ?></th>
-              </tr>
-              <tr>
-                <td>その他</td><th><?php echo get_post_meta($post->ID , 'その他' ,true); ?></th>
-              </tr>
-            </table>
+  <td><?php echo get_post_meta($post->ID, '項目名1' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容1' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名2' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容2' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名3' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容3' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名4' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容4' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名5' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容5' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名6' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容6' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名7' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容7' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名8' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容8' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名9' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容9' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名10' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容10' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名11' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容11' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名12' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容12' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名13' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容13' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名14' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容14' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名15' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容15' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名16' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容16' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名17' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容17' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名18' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容18' ,true); ?></th>
+</tr>
+<tr>
+  <td><?php echo get_post_meta($post->ID, '項目名19' ,true)?></td>
+  <th><?php echo get_post_meta($post->ID, '内容19' ,true); ?></th>
+</tr>
+
+          </table>
           </div>
           <?php endif?>
           <div class="send-to-area">
@@ -121,7 +165,8 @@
                   <h4>書類提出先</h4>
                   <p>
                     〒861-4193 熊本市南区近見5丁目3-1<br>
-                    社会福祉法人恩賜財団済生会熊本病院 人事室
+                    社会福祉法人恩賜財団済生会熊本病院 人事室<br>
+                    担当:早崎
                   </p>
                 </div>
               </div>
