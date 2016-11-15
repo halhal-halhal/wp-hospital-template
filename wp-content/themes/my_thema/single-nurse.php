@@ -47,7 +47,7 @@
       </table>
     </div>
     <!-- Image Header -->
-    <?php if( get_post_meta($post->post_content) ):?>
+    <?php if( !empty($post->post_content) ):?>
       <div id="sidenav-message"></div>
     <div class="message-area">
       <div class="row">
@@ -211,7 +211,7 @@
       <hr>
       <!-- sidenav-->
       <div id="sidenav">
-        <ul><?php if( get_post_meta($post->post_content) ):?>
+        <ul><?php if( !empty($post->post_content) ):?>
           <li><a href="#sidenav-message">メッセージ</a></li><?php endif?>
           <li><a href="#sidenav-recruit">募集要項</a></li>
             <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>
