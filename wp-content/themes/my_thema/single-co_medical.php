@@ -65,7 +65,7 @@
         </div>
       </div>
       <?php endif?>
-      <.div>
+      </div>
       <div id="sidenav-recruit"></div>
   
 
