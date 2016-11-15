@@ -70,8 +70,8 @@
       // 配列宣言
       // ここにスクロールで点灯させる箇所のidを記述する
       // 数値は全て0でOK
-      var array = {
-        '#sidenav-message': 0,
+      var array = { <?php if( get_post_meta($post->ID, 'トップ画像', true) ):?>
+        '#sidenav-message': 0,<?php  endif?>
         '#sidenav-recruit': 0  <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>,
         '#sidenav-qaa': 0
         <?php endif?>

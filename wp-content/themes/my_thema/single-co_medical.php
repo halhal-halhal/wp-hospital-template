@@ -47,6 +47,7 @@
       </table>
     </div>
     <!-- Image Header -->
+    <?php if( get_post_meta($post->post_content) ):?>
       <div id="sidenav-message"></div>
     <div class="message-area">
       <div class="row">
@@ -63,8 +64,10 @@
         <?php endwhile; ?>
         </div>
       </div>
+      <?php endif?>
+      <.div>
       <div id="sidenav-recruit"></div>
-    </div>
+  
 
 
     <div class="requirements-area">
@@ -208,9 +211,9 @@
           <?php endif?>
       <hr>
       <!-- sidenav-->
-      <div id="sidenav">
-        <ul>
-          <li><a href="#sidenav-message">メッセージ</a></li>
+       <div id="sidenav">
+        <ul><?php if( get_post_meta($post->post_content) ):?>
+          <li><a href="#sidenav-message">メッセージ</a></li><?php endif?>
           <li><a href="#sidenav-recruit">募集要項</a></li>
             <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>
           <li><a href="#sidenav-qaa">Q&A</a></li>
