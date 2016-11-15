@@ -64,11 +64,11 @@
         <?php endwhile; ?>
         </div>
       </div>
+         </div>
       <?php endif?>
-      </div>
+   
       <div id="sidenav-recruit"></div>
   
-
 
     <div class="requirements-area">
       <div class="requirements">
