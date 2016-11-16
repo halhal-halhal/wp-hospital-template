@@ -5,7 +5,7 @@ Template Name: facility
 ?><?php get_header();?>
 
   <section id="content-top">
-    <div id="top-img">
+   <div id="top-img" style="background-image: url(<?php echo get_field('トップ画像'); ?>);">
       <div class="container">
         <!-- パンくずリスト -->
         <div class="row">
@@ -18,7 +18,7 @@ Template Name: facility
         </div>
         <!-- /.row -->
       </div>
-      <div id="top-message" background="<?php echo get_field('トップ画像'); ?>">
+      <div id="top-message">
         <span class="top-line"><span>職員サポート</span></span>
         <h1>院内施設</h1>
         <p>図書館やシミュレーション室など、<br>
@@ -39,27 +39,27 @@ Template Name: facility
         <div class="col-md-1 col-sm-0 col-xs-0"></div>
         <a href="#training" class="index-menu">
           <div class="col-md-2 col-sm-4 col-xs-6">
-            <img src="http://placehold.jp/24/cc9999/993333/180x180.png"/>
+            <img src="<?php echo get_field('リンクアイコン1'); ?>"/>
           </div>
         </a>
         <a href="#shop1" class="index-menu">
           <div class="col-md-2 col-sm-4 col-xs-6">
-            <img src="http://placehold.jp/24/cc9999/993333/180x180.png"/>
+            <img src="<?php echo get_field('リンクアイコン2'); ?>"/>
           </div>
         </a>
         <a href="#shop2" class="index-menu">
           <div class="col-md-2 col-sm-4 col-xs-6">
-            <img src="http://placehold.jp/24/cc9999/993333/180x180.png"/>
+            <img src="<?php echo get_field('リンクアイコン3'); ?>"/>
           </div>
         </a>
         <a href="#shop3" class="index-menu">
           <div class="col-md-2 col-sm-6 col-xs-6">
-            <img src="http://placehold.jp/24/cc9999/993333/180x180.png"/>
+            <img src="<?php echo get_field('リンクアイコン4'); ?>"/>
           </div>
         </a>
         <a href="#shop4" class="index-menu">
           <div class="col-md-2 col-sm-6 col-xs-6">
-            <img src="http://placehold.jp/24/cc9999/993333/180x180.png"/>
+            <img src="<?php echo get_field('リンクアイコン5'); ?>"/>
           </div>
         </a>
         <div class="col-md-1 col-sm-0 col-xs-0"></div>
@@ -69,7 +69,7 @@ Template Name: facility
     <div id="training"></div>
     <div class="training">
       <h3>教育研修センター Learning SKAiR : Salvia(サルビア)/ Training SKAiR Apice(アピス)</h3>
-      <img src="http://placehold.jp/24/cc9999/993333/914x288.png" alt="" />
+      <img src="<?php echo get_field('教育研修センター_画像'); ?>" alt="" />
       <h4>さらなる成長をめざして ～ 教育研修センター ～</h4>
       <p>
         2015年5月、職員専用の図書室・勉強室、シミュレーション室等を備えた教育研修センターをオープンしました。
@@ -90,7 +90,7 @@ Template Name: facility
       <h3>職員健康管理室</h3>
       <div class="content">
         <div class="cf">
-          <img src="http://placehold.jp/24/cc9999/993333/400x220.png" align="right" />
+          <img src="<?php echo get_field('職員健康管理室_画像'); ?>" align="right" style="padding-bottom: 1em;"/>
           <h4>職員の健康を守るために</h4>
           <p>
             2013年9月1日より職員健康管理室が稼働し、
@@ -158,54 +158,44 @@ Template Name: facility
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="shop">
                 <div id="shop1"></div>
-                <h3>ローソン(LAWSON)済生会熊本病院店</h3>
-                <img src="http://placehold.jp/24/cc9999/993333/400x300.png"/>
-                <h4>～24時間営業で便利!～</h4>
+                <h3><?php echo get_field('施設紹介1'); ?></h3>
+                <img src="<?php echo get_field('施設紹介1_画像'); ?>"/>
+                <h4>～<?php echo get_field('施設紹介1_キャッチ'); ?>～</h4>
                 <p>
-                  食料品・書籍・衛生材料などがそろったコンビニエンスストア(ローソン)があります。
-                  24時間営業なので、夜勤帯などでも利用可能です。
+                  <?php echo get_field('施設紹介1_内容'); ?>
                 </p>
               </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="shop">
                 <div id="shop2"></div>
-                <h3>ベーカリー&カフェふわり</h3>
-                <img src="http://placehold.jp/24/cc9999/993333/400x300.png"/>
-                <h4>～焼きたてのパンが人気です～</h4>
+                <h3><?php echo get_field('施設紹介2'); ?></h3>
+                <img src="<?php echo get_field('施設紹介2_画像'); ?>"/>
+                <h4>～<?php echo get_field('施設紹介2_キャッチ'); ?>～</h4>
                 <p>
-                  店内でつくる焼きたてのパンはおすすめです。コーヒーなどのドリンクとのセットメニューもあります。
-                </p>
-                <p>
-                  済生会熊本福祉センターに所属する知的障害を持つ方々が、支援スタッフと一緒にベーカリーで働いています。
-                </p>
-                <p>
-                  また、店内の商品は職員割引価格で購入可能です。
+                   <?php echo get_field('施設紹介2_内容'); ?>
                 </p>
               </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div class="shop">
                 <div id="shop3"></div>
-                <h3>職員食堂</h3>
-                <img src="http://placehold.jp/24/cc9999/993333/400x300.png"/>
-                <h4>～日替わりで食事が楽しめます～</h4>
+                <h3><?php echo get_field('施設紹介3'); ?></h3>
+                <img src="<?php echo get_field('施設紹介3_画像'); ?>"/>
+                <h4>～<?php echo get_field('施設紹介3_キャッチ'); ?>～</h4>
                 <p>
-                  毎日格安価格で食事ができる職員専用の食堂があります。日替わり定食は通常のメニューに加えより栄養バランスやカロリーに配慮したヘルシー定食、
-                </p>
-                <p>
-                  週替わり定食の3種類があり、その他にも麺類、カレー、おにぎりなど充実しています。
+                  <?php echo get_field('施設紹介3_内容'); ?>
                 </p>
               </div>
             </div>
             <div class="col-md-6 col-sm-6 col-xs-12">
               <div id="shop4"></div>
               <div class="shop">
-                <h3>フィットネスセンター</h3>
-                <img src="http://placehold.jp/24/cc9999/993333/400x300.png"/>
-                <h4>～職員向け健康教室等も～</h4>
+                <h3><?php echo get_field('施設紹介4'); ?></h3>
+                <img src="<?php echo get_field('施設紹介4_画像'); ?>"/>
+                <h4>～<?php echo get_field('施設紹介4_キャッチ'); ?>～</h4>
                 <p>
-                  エアロバイク・ウォーキングマシンなど、各種トレーニングマシンを揃えた施設です。平日は22時まで営業しているため、仕事終わりに汗を流すこともできます。
+                  <?php echo get_field('施設紹介4_内容'); ?>
                 </p>
               </div>
             </div>

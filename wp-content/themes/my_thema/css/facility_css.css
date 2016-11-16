@@ -1,6 +1,5 @@
 
 div#top-img{
-  background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -32,6 +31,9 @@ div#top-message{
   margin: auto;
   margin-top: 3em;
   text-align: center;
+}
+.link-area img{
+  width: 100%;
 }
 
 @media screen and (max-width: 769px) {
@@ -87,6 +89,7 @@ background-color: #fff1f1;
 
 #health img{
   padding-left: 2em;
+  width: 100%;
 }
 
 

@@ -50,7 +50,7 @@
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-<?php if( is_single() ): ?>
+<?php if( is_single() || is_page_template('facility.php') ): ?>
   <script type="text/javascript">
   $(function(){
     $('a[href^="#"]').click(function(){
@@ -89,7 +89,7 @@
       // 数値は全て0でOK
       var array = { <?php if( !empty($post->post_content) ):?>
         '#sidenav-message': 0,<?php  endif?>
-        '#sidenav-recruit': 0  <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>,
+        '#sidenav-recruit': 0,  <?php if(get_post_meta($post->ID , 'q_1' ,true) != ""): ?>
         '#sidenav-qaa': 0
         <?php endif?>
       };
