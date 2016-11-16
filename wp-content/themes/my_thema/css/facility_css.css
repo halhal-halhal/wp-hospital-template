@@ -1,0 +1,184 @@
+
+div#top-img{
+  background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30em;
+}
+@media screen and (min-width:387px)  {
+div#top-message{
+  background-color: rgba(13, 27, 126, 0.84);
+  color: white;
+  width: 20em;
+  margin-left: 15%;
+  height: 20em;
+  padding-left: 1em;
+  padding-right: 1em;
+  text-align: center;
+  padding-top: 2em;
+}
+#top-message p{
+  text-align: left;
+}
+#top-message h1{
+  font-size: 400%;
+  font-weight: bolder;
+}
+}
+
+.link-area{
+  width: auto;
+  margin: auto;
+  margin-top: 3em;
+  text-align: center;
+}
+
+@media screen and (max-width: 769px) {
+  div.link-area *{
+    display: none !important;
+  }
+}
+.training{
+  margin-top: 3em;
+  padding: 3em 2em;
+  background-color: #fff1f1;
+  text-align: center;
+}
+h3{
+  font-weight: bold;
+  color: rgb(215, 152, 22);
+}
+.training p{
+  text-align: left;
+  padding: 0 2em;
+}
+.training img{
+  padding: 0.5em 0;
+  width: 100%;
+}
+.training h4{
+  padding-top: 1em;
+  font-weight: bold;
+}
+
+
+#health{
+  text-align: center;
+background-color: #fff1f1;
+  margin-top: 3em;
+  padding: 3em 2em;
+  margin-bottom: 2em;
+}
+
+#health div.content{
+  margin-top: 2em;
+}
+
+#health h4{
+  padding-top: 1em;
+  font-weight: bold;
+}
+
+#health p{
+  text-align: left;
+  padding: 0 2em;
+}
+
+#health img{
+  padding-left: 2em;
+}
+
+
+
+@media screen and (max-width: 992px) {
+  div.for-pcview *{
+    display: none !important;
+  }
+  .for-spview table th{
+    margin-bottom: 1em;
+    background: #D9A300;
+    color: white;
+  }
+  .for-spview table td{
+    margin-bottom: 2em;
+  background-color: #ffeeee;
+    padding: 1em 0.5em;
+  }
+}
+@media screen and (min-width: 993px){
+  div.for-spview *{
+    display: none !important;
+  }
+  #health table {
+  	width: 100%;
+  	color: #333333;
+  	border: #DDDDDD solid 1px;
+  	margin-bottom: 40px;
+  }
+  #health table th {
+    padding: 8px;
+    background: #D9A300;
+    text-align: center;
+    font-weight: bold;
+    color: #FFF;
+  }
+
+  #health table td {
+    padding: 8px;
+    background: #FFF;
+    border: #DDDDDD solid 1px;
+    color: #333333;
+    min-width: 15em;
+  }
+
+  #health table tr {
+    background: #FDEAF0;
+    border: #DDDDDD solid 1px;
+    color: #202020;
+  }
+}
+
+.shop{
+  text-align: center;
+  background-color: #fff1f1;
+  width: 90%;
+  margin: auto;
+  margin-top: 3em;
+  padding: 2em 1em;
+}
+@media screen and (min-width: 770px){
+  .shop{
+    text-align: center;
+    background-color: #fff1f1;
+    width: 90%;
+    margin: auto;
+    margin-top: 3em;
+    padding: 2em 1em;
+    height: 48em;
+  }
+}
+
+.shop div.content{
+  margin-top: 2em;
+}
+
+.shop h3{
+  margin-bottom: 1em;
+}
+
+.shop h4{
+  padding-top: 1em;
+    color: rgb(215, 152, 22);
+  font-weight: bold;
+}
+.shop img{
+  width: 100%;
+}
+.shop p{
+  text-align: left;
+  padding: 0 2em;
+}
+
+
+/*-------------------------------------------------------------------------*/

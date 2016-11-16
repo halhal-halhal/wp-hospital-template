@@ -50,11 +50,11 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <p id="header_btn" class="navbar-right__top"><a href="#">資料請求・お問い合わせ</a></p>
         <ul class="nav navbar-nav navbar-right navbar-right__bottom">
-          <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 求める人物像</a></li>
-          <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 教育体制（人材育成）</a></li>
-          <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 福利厚生</a></li>
-          <li><a href="#"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 採用説明会･病院見学</a></li>
-        </ul>
+          <li><a href="<?php echo home_url(); ?>/求める人物像"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 求める人物像</a></li>
+          <li><a href="<?php echo home_url(); ?>/教育体制人材育成プログラム"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 教育体制（人材育成）</a></li>
+          <li><a href="<?php echo home_url(); ?>/福利厚生"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 福利厚生</a></li>
+          <li><a href="<?php echo home_url(); ?>/採用説明会・病院見学"><i class="fa fa-chevron-circle-right" aria-hidden="true"></i> 採用説明会･病院見学</a></li>
+         </ul>
       </div>
       <!-- /.navbar-collapse -->
     </div>

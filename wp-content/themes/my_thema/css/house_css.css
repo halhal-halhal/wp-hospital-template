@@ -1,0 +1,295 @@
+
+div#top-img{
+  background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 30em;
+}
+@media screen and (min-width:387px)  {
+div#top-message{
+  background-color: rgba(13, 27, 126, 0.84);
+  color: white;
+  width: 20em;
+  margin-left: 15%;
+  height: 20em;
+  text-align: center;
+  padding-top: 2em;
+}
+#top-message h1{
+  font-size: 400%;
+  font-weight: bolder;
+}
+}
+
+div.house-detail{
+  width: 90%;
+  background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
+  background-repeat: no-repeat;
+  margin: auto;
+  margin-top: 3em;
+  background-position: center;
+  height: 20em;
+  padding-left: 3em;
+  padding-top: 0.5em;
+  padding-right: 40%;
+}
+
+.accordion {
+	min-width: 250px;
+	margin: 0 auto;
+}
+.accordion .ac-content {
+	margin: 0 10px;
+}
+.accordion input {
+	display: none;
+}
+.accordion label {
+	display: block;
+	background: rgba(180,180,180,0.5);
+	cursor: pointer;
+	padding: 10px;
+	border-bottom: 1px solid rgba(80,80,80,0.9);;
+}
+.accordion label:hover {
+	background: rgba(220,220,220,0.9);;
+}
+.accordion .ac-cont {
+	transition: 0.2s;
+	height: 0;
+  z-index: 6;
+	overflow: hidden;
+	background: rgba(220,220,220,0.9);
+	padding: 0 10px;
+}
+.accordion input:checked + .ac-cont {
+	height: auto;
+	padding: 10px;
+}
+
+@media screen and (max-width:769px)  {
+  div.pc-site{
+    display: none;
+  }
+  div.sp-site{
+    background-color: #e0e0e0;
+    width: 90%;
+    margin: auto;
+    padding: 0.5em 1em;
+  }
+  div.house-detail{
+    width: 90%;
+    background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 3em;
+    background-position: center;
+    height: 15em;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-right: 1em;
+  }
+}
+@media screen and (min-width:770px) and (max-width: 992px) {
+  section#content-top{
+    width: 100%;
+    padding-top: 2em;
+  }
+  div.pc-site{
+    display: none;
+  }
+  div.sp-site{
+    background-color: #e0e0e0;
+    width: 90%;
+    margin: auto;
+    padding: 0.5em 1em;
+  }
+  div.house-detail{
+    width: 90%;
+    background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 3em;
+    background-position: center;
+    width: 90%;
+    
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-right: 1em;
+  }
+}
+@media screen and (min-width:993px) {
+  body{
+  margin-top: -46px;
+}
+  div.sp-site{
+    display: none;
+  }
+  div.house-detail{
+    width: 90%;
+    background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
+    background-repeat: no-repeat;
+    margin: auto;
+    margin-top: 3em;
+    background-position: center;
+    height: auto;
+    padding-left: 3em;
+    padding-top: 0.5em;
+    padding-right: 40%;
+  }
+}
+
+
+@media screen and (max-width:386px)  {
+  div#top-message{
+    background-color: rgba(13, 27, 126, 0.84);
+    color: white;
+    width: 20em;
+    margin-left: 7.5%;
+    height: 20em;
+    text-align: center;
+    padding-top: 2em;
+  }
+  #top-message h1{
+    font-size: 400%;
+    font-weight: bolder;
+  }
+}
+
+#header-nav{
+  z-index: 9;
+}
+
+
+.voice{
+  background-color: #e0e0e0;
+  width: 90%;
+  margin: 3em auto;
+  padding: 0.5em 2em;
+}
+
+.voice h4{
+  font-size: 100%;
+}
+
+.voice_content{
+  padding-top: 1em;
+}
+
+.voice img{
+  max-height: 12em;
+  width:auto;
+}
+
+@media screen and (min-width:770px)  {
+  .voice_content p{
+    margin-left: 15em;
+  }
+  .voice img{
+    width: 14em;
+  }
+}
+
+
+.voice_title{
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: rgb(33, 53, 187);
+}
+
+@media screen and (min-width:991px)  {
+  .around_info{
+    width: 90%;
+    background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+
+  }
+
+  .around_info li{
+    list-style-type: none;
+  }
+
+  .around_info div.info_detail{
+    width: 50%;
+    /*  background-color: rgb(231, 203, 132); */
+    margin-left: 50%;
+    padding: 1em;
+    padding-top: 11em;
+  }
+
+  .around_info .info_detail h3{
+    font-size: 130%;
+    font-weight: bolder;
+  }
+  .around_info .info_detail ul li{
+    font-size: 80%;
+    font-weight: normal;
+    line-height: 1.2em;
+  }
+  .around_info .info_detail ul{
+    margin-top: -0.5em;
+    margin-left: -2em;
+  }
+}
+
+@media screen and (max-width:990px)  {
+  .around_info{
+    width: 90%;
+    margin: auto;
+  }
+
+  .around_info div.sm-space{
+    width: 100%;
+    height: 15em;
+    background-image: url(http://placehold.jp/24/cc9999/993333/1000x500.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: auto;
+  }
+
+  .around_info li{
+    list-style-type: none;
+  }
+
+  .around_info div.info_detail{
+    width: 100%;
+    margin-top: -2em;
+    padding: 0.5em;
+    background-color: rgb(231, 203, 132);
+    }
+
+
+  .around_info .info_detail h3{
+    font-size: 130%;
+    font-weight: bolder;
+  }
+  .around_info .info_detail ul li{
+    font-size: 80%;
+    font-weight: normal;
+    line-height: 1.2em;
+  }
+  .around_info .info_detail ul{
+    margin-top: -0.5em;
+    margin-left: -2em;
+  }
+}
+
+
+.gallery{
+  width: 90%;
+  margin: auto;
+  margin-top: 5em;
+}
+
+.gallery p{
+  text-align: center;
+  font-size: 1.25em;
+}
+.gallery img{
+  width: 90%;
+}

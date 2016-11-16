@@ -1,0 +1,49 @@
+#top-title{
+  width: 90%;
+  margin: auto;
+}
+#top-title h1{
+  padding-left: 1em;
+  width: 100%;
+  font-weight: bolder;
+}
+#top-title h1:before{
+  content:'>';
+  margin-top: 0.4em;
+  margin-left: -3em;
+  padding-top: 0.3em;
+  padding-left: 0.5em;
+  border-radius:30px;
+  -webkit-border-radius:30px;
+  -moz-border-radius:30px;
+  height:1.8em;
+  width:1.8em;
+  font-size: 50%;
+  position: absolute;
+  display:inline-block;
+  color: rgba(255,255,255,0.9);
+  background-color: #808080;
+}
+
+.link-area{
+  width: 90%;
+  margin: auto;
+}
+.link-area img{
+  margin-bottom: 2em;
+  margin-top: 1em;
+  border-radius: 40px;
+}
+
+.contact-wrap{
+  padding: 3em;
+  margin-top: 2em;
+  background-color: #e0e0e0;
+}
+.contact-table{
+  padding: 2em;
+}
+.contact-table th{
+  background-color: rgb(117, 130, 118);
+  color: white;
+}

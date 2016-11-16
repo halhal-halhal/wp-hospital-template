@@ -33,6 +33,10 @@ html,body{
 /*  #Globalnav-area
 /* ==========================================*/
 @media screen and (max-width:992px) and (min-width:500px) {
+  section#content-top{
+    width: 100%;
+    padding-top: 2em;
+  }
   #global-nav > .container {
     position: relative;
   }
