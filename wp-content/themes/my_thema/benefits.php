@@ -33,24 +33,24 @@ Template Name: benefits
     <!-- Link Area -->
     <div class="link-area">
       <div class="row">
-        <a href="#training" class="index-menu">
+        <a href="<?php echo home_url(); ?>/教育研修センター" class="index-menu">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="http://placehold.jp/24/cc9999/993333/1000x300.png"/>
+            <img src="<?php echo get_field('教育研修センター'); ?>"/>
           </div>
         </a>
-        <a href="#training" class="index-menu">
+        <a href="<?php echo home_url(); ?>/院内保育園" class="index-menu">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="http://placehold.jp/24/cc9999/993333/1000x300.png"/>
+            <img src="<?php echo get_field('院内保育園'); ?>"/>
           </div>
         </a>
-        <a href="#training" class="index-menu">
+        <a href="<?php echo home_url(); ?>/職員寮" class="index-menu">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="http://placehold.jp/24/cc9999/993333/1000x300.png"/>
+            <img src="<?php echo get_field('職員寮'); ?>"/>
           </div>
         </a>
-        <a href="#training" class="index-menu">
+        <a href="<?php echo home_url(); ?>/院内施設" class="index-menu">
           <div class="col-md-12 col-sm-12 col-xs-12">
-            <img src="http://placehold.jp/24/cc9999/993333/1000x300.png"/>
+            <img src="<?php echo get_field('院内施設'); ?>"/>
           </div>
         </a>
       </div>

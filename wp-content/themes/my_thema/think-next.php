@@ -4,7 +4,7 @@ Template Name: think-next
 */
 ?><?php get_header();?>
   <section id="content-top" >
-    <div id="top-img" background="<?php echo get_field('トップ画像'); ?>">
+    <div id="top-img" style="background-image: url(<?php echo get_field('トップ画像'); ?>);">
       <div class="container">
         <!-- パンくずリスト -->
         <div class="row">
@@ -25,39 +25,17 @@ Template Name: think-next
   <!-- Page Content -->
   <div class="container">
     <div class="director-message">
-      <div class="cf">
+      
       <div id="director-pic">
-        <img src="http://placehold.jp/24/cc9999/993333/200x250.png"/><br>
+        <img src="<?php echo get_field('院長_写真'); ?>"/><br>
         <span>済生会熊本病院　院長</span>
-        <h3>副島 秀久<br><span>Hidehisa Soejima</span></h3>
+        <h3><?php echo get_field('院長名'); ?><br><span><?php echo get_field('院長名_英語'); ?></span></h3>
       </div>
       <h2><span>院長メッセージ</span><br>
-      我々と医療の世界を変えていきませんか？</h2>
-      <p>
-        日本は今や大きな転換期を迎えています。
-        高齢化社会、地球温暖化、世界的な不況・・・。
-        激変する外部環境の中で、医療や私たちの働き方、考え方もまた大きな変革が求められています。
-      </p>
-      <p>
-        私たちが目指すのは地域のニーズを先取りした病院づくりであり、
-        いま地域から最も求められているものは何かを常に考え変革してきました。
-        2007年には外来がん治療センターを開設、2008年にはがん診療連携拠点病院としての認定を受け、
-        日帰り手術・治療室の運用も開始しました。そして2010年には救命救急センターの指定を受けました。
-        これらは地域の皆様の支援はもちろんのこと、スタッフひとりひとりの努力があってのものです。
-        私たちは今なおよりよい医療を通して地域に貢献できる病院を目指しています。
-      </p></div>
-      <p>
-        また、働きやすい職場づくりも大きな目標のひとつで、
-        保育園の設置や勤務時間の短縮などに取り組み、
-        ワークライフバランスを保ち健全な社会生活や家庭生活ができるよう応援しています。
-      </p>
-      <p>
-        医療はチームがいかに機能するかでその質が決まります。
-        みなさんも私たちチームの一員となり、地域に貢献できる医療を目指してみませんか。
-        私たち済生会熊本病院のいちばんの魅力はチームワークです。
-        それを実現する「人の強さ」はどこにも負けない、そう信じています。
-      </p>
+      <?php echo get_field('院長_メッセージ_見出し'); ?></h2>
+       <p><?php echo get_field('院長_メッセージ'); ?></p>
     </div>
+    
     <div id="think-next">
       <h4><span>求める人材像</span></h4>
       <h3>THINK NEXT 常に一歩先を見据え、行動できる方</h3>
@@ -78,7 +56,7 @@ Template Name: think-next
         「断らない救急」「高度医療の追求」を診療方針として、専門医療チームが24時間迅速に対応し、<br>
         臓器別の専門診療体制を組むことで、より高度で最新・最良の医療を提供します。<br>
       </p>
-      <img id="logo" src="http://placehold.jp/24/cc9999/993333/178x126.png" height="126px" width="178px"/>
+      <img id="logo" src="<?php echo get_field('済生会_ロゴ'); ?>" height="126px" width="178px"/>
     </div>
     <hr>
   </div>
