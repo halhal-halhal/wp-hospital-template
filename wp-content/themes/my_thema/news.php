@@ -52,7 +52,7 @@
                 <table class="news-table">
                  <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?><tr>
                 <th><div class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
-                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></th>
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></div></th>
                   <td><?php the_time(Y年n月j日); ?></td>
                   <td><a href="<?php the_permalink(); ?>"><?php the_title();?></a></td>
                 </li></tr>
@@ -78,7 +78,7 @@
                 <table class="news-table">
                  <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?><tr>
                 <th><div class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
-                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></th>
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></div></th>
                   <td><?php the_time(Y年n月j日); ?></td>
                   <td><a href="<?php the_permalink(); ?>"><?php the_title();?></a></td>
                 </li></tr>
@@ -103,7 +103,7 @@
                 <table class="news-table">
                  <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?><tr>
                 <th><div class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
-                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></th>
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></div></th>
                   <td><?php the_time(Y年n月j日); ?></td>
                   <td><a href="<?php the_permalink(); ?>"><?php the_title();?></a></td>
                 </li></tr>
@@ -128,7 +128,7 @@
                 <table class="news-table">
                  <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?><tr>
                 <th><div class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
-                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></th>
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></div></th>
                   <td><?php the_time(Y年n月j日); ?></td>
                   <td><a href="<?php the_permalink(); ?>"><?php the_title();?></a></td>
                 </li></tr>
@@ -153,7 +153,7 @@
                 <table class="news-table">
                  <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?><tr>
                 <th><div class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
-                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></th>
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></div></th>
                   <td><?php the_time(Y年n月j日); ?></td>
                   <td><a href="<?php the_permalink(); ?>"><?php the_title();?></a></td>
                 </li></tr>
@@ -178,7 +178,7 @@
                 <table class="news-table">
                  <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?><tr>
                 <th><div class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
-                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></th>
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></div></th>
                   <td><?php the_time(Y年n月j日); ?></td>
                   <td><a href="<?php the_permalink(); ?>"><?php the_title();?></a></td>
                 </li></tr>
@@ -203,7 +203,7 @@
                 <table class="news-table">
                  <?php if($wp_query->have_posts()): while($wp_query->have_posts()) : $wp_query->the_post(); ?><tr>
                 <th><div class="icon_<?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?>">
-                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></th>
+                  <span><?php echo get_post_meta($post->ID , 'ジャンル名' ,true); ?></span></div></th>
                   <td><?php the_time(Y年n月j日); ?></td>
                   <td><a href="<?php the_permalink(); ?>"><?php the_title();?></a></td>
                 </li></tr>

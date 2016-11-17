@@ -38,6 +38,9 @@
   <?php if( is_page_template('think-next.php') ):?>
     <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/think_next.css" rel="stylesheet">
   <?php endif?>
+    <?php if( is_page_template('guidance.php') ):?>
+    <link href="<?php echo get_stylesheet_directory_uri(); ?>/css/guidance.css" rel="stylesheet">
+  <?php endif?>
   
   <!-- Custom Fonts -->
   <script src="https://use.fontawesome.com/a3de6310f4.js"></script>
