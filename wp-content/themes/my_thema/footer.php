@@ -109,7 +109,7 @@
                   <li><a href="<?php echo home_url(); ?>/求める人物像">求める人物像</a></li>
                   <li><a href="<?php echo home_url(); ?>/教育体制人材育成プログラム">教育体制(人材育成)プログラム</a></li>
                   <li><a href="<?php echo home_url(); ?>/福利厚生">福利厚生</a></li>
-                  <li><a href="#">採用説明会・病院見学について</a></li>
+                  <li><a href="<?php echo home_url(); ?>/採用説明会・病院見学">採用説明会・病院見学について</a></li>
                 </ul>
               </div>
               <!--./row-->

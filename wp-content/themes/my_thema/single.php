@@ -34,18 +34,39 @@
         <li class="back"><a href="#">診療科医師　INDEXに戻る</a></li>
       </ul>
     </div>
+    <?php if( get_post_meta($post->ID , 'ページの追加', true) ): ?>
     <div class="content-menu">
       <table class="content-table <?php echo $type_name;?>">
         <tr class="content-tr">
-          <th>救急医・総合診療医</th>
-          <th>部長インタビュー</th>
-          <th>センターの特徴</th>
-          <th>教育・研修体制</th>
-          <th>診療実績・学術研究業績</th>
-          <th>取り組み・イベント</th>
+          <th><?php the_title();?></th>
+          <?php if (!empty( get_post_meta($post->ID , '追加ページタイトル1', true) ) ): ?>
+          <th><?php the_field('追加ページタイトル1'); ?></th>
+          <?php endif ?>
+          <?php if (!empty( get_post_meta($post->ID , '追加ページタイトル2', true) ) ): ?>
+          <th><?php the_field('追加ページタイトル2'); ?></th>
+          <?php endif ?>
+          <?php if (!empty( get_post_meta($post->ID , '追加ページタイトル3', true) ) ): ?>
+          <th><?php the_field('追加ページタイトル3'); ?></th>
+          <?php endif ?>
+          <?php if (!empty( get_post_meta($post->ID , '追加ページタイトル4', true) ) ): ?>
+          <th><?php the_field('追加ページタイトル4'); ?></th>
+          <?php endif ?>
+          <?php if (!empty( get_post_meta($post->ID , '追加ページタイトル5', true) ) ): ?>
+          <th><?php the_field('追加ページタイトル5'); ?></th>
+          <?php endif ?>
+          <?php if (!empty( get_post_meta($post->ID , '追加ページタイトル6', true) ) ): ?>
+          <th><?php the_field('追加ページタイトル6'); ?></th>
+          <?php endif ?>
+          <?php if (!empty( get_post_meta($post->ID , '追加ページタイトル7', true) ) ): ?>
+          <th><?php the_field('追加ページタイトル7'); ?></th>
+          <?php endif ?>
+          <?php if (!empty( get_post_meta($post->ID , '追加ページタイトル8', true) ) ): ?>
+          <th><?php the_field('追加ページタイトル8'); ?></th>
+          <?php endif ?>
         </tr>
       </table>
     </div>
+    <?php endif ?>
     <!-- Image Header -->
     <?php if( !empty($post->post_content) ):?>
       <div id="sidenav-message"></div>

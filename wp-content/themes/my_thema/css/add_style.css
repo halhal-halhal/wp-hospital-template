@@ -959,6 +959,7 @@ div.message-area{
 .message {
   width: 90%;
   margin: auto;
+  padding-top: 2em;
 }
 .message h3{
   padding-top: 1em;
