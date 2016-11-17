@@ -3,25 +3,25 @@ html,body{
 }
 
 @media(max-width:992px){
-  th {
+  header th {
     position: relative;
     padding: .75em 1em;
     background-color: #f0f0f0;
   }
-  th::before,
-  th::after {
+  header th::before,
+  header th::after {
     content: '';
     position: absolute;
     top: 100%;
     border-style: solid;
     border-color: transparent;
   }
-  th::before {
+  header th::before {
     left: 0;
     border-width: 0 15px 15px 0;
     border-right-color: #ccc;
   }
-  th::after {
+  header th::after {
     right: 0;
     border-style: solid;
     border-width: 15px 15px 0 0;
@@ -877,10 +877,10 @@ a.index-menu:hover{
 }
 
 @media screen and (max-width: 992px) and (min-width: 768px) {
-  .content-menu table, tbody, tr, th, td {
+  .content-menu table *{
     display: inline-block;
   }
-
+  
   div.content-menu{
     margin: 0;
   }
@@ -889,15 +889,16 @@ a.index-menu:hover{
     width: auto;
     margin-top: 3em;
   }
-
+  div.content-menu table.content-table th{
+    border-bottom: solid 2px rgba(4, 4, 22, 0.4);
+  }
   div.content-menu table.content-table th{
     text-align: center;
-    margin-top: 2px;
+    margin-top: 4px;
     color: white;
     height: 3em;
     padding-top: 0.5em;
     width: 49.5%;
-    border: solid 2px rgba(4, 4, 22, 0.4);
   }
   div.content-menu table th:hover{
     text-align: center;
@@ -926,12 +927,15 @@ a.index-menu:hover{
   div.content-menu table.content-table th{
     text-align: center;
     color: white;
-    background-color: rgba(52, 86, 187, 0.8);
-    margin-top: 12px;
+    background-color: inherit;
+    margin-top: 10px;
     height: 3em;
     padding-top: 0.5em;
     width: 100%
     border: solid 2px rgba(4, 4, 22, 0.4);
+  }
+  div.content-menu table.content-table th{
+    border-bottom: solid 2px rgba(4, 4, 22, 0.4);
   }
   div.content-menu table.content-table th:hover{
     text-align: center;

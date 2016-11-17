@@ -90,7 +90,7 @@
                     <div class="col-sm-4 col-md-4">
                       <p>採用に関するお問い合わせ先</p>
                       <h3>[人事室直通] <span>03-0000-0000</span></h3>
-                      <p id="footer_btn"><a href="#">資料請求・お問い合わせ</a></p>
+                      <p id="footer_btn"><a href="<?php echo home_url(); ?>/資料請求・お問い合わせ">資料請求・お問い合わせ</a></p>
                       <p>社会福祉法人 恩賜財団 済生会熊本病院</p>
                       <address>〒861-4193 熊本市南区近見5丁目3番1号</address>
                     </div>
@@ -106,9 +106,9 @@
               <div class="row">
                 <ul id="footer_nav__inner">
                   <li><a href="<?php echo home_url(); ?>">トップページ</a></li>
-                  <li><a href="#">求める人物像</a></li>
-                  <li><a href="#">教育体制(人材育成)プログラム</a></li>
-                  <li><a href="#">福利厚生</a></li>
+                  <li><a href="<?php echo home_url(); ?>/求める人物像">求める人物像</a></li>
+                  <li><a href="<?php echo home_url(); ?>/教育体制人材育成プログラム">教育体制(人材育成)プログラム</a></li>
+                  <li><a href="<?php echo home_url(); ?>/福利厚生">福利厚生</a></li>
                   <li><a href="#">採用説明会・病院見学について</a></li>
                 </ul>
               </div>
